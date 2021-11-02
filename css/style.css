@@ -1,0 +1,306 @@
+body{
+    font-family:  'Poiret One', serif;
+    background: url('../gifs/lush.gif');
+    
+    background-size: cover;
+    background-color: none;
+    background-repeat: no-repeat;
+
+    /* font-size: 16pt; test for this! Make all sizes em or rem */
+  }
+  .flex-container {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  header{
+    display:flex;
+    background: #fff;
+    border-bottom: 3px solid #000000;
+    justify-content:center;
+    flex-direction: column;
+    align-items:center;
+    position: sticky;
+  }
+  a { 
+    color: rgb(0, 0, 0);
+    }  
+
+    .card h3 {
+      font-size: 2em;
+      color: white;
+      text-align: center center;
+  }
+
+  .nav_links{
+    display:flex;
+    justify-content:center;
+    flex-direction: column;
+    align-items:center;
+    padding: 1px;
+  }
+
+  .pricing{
+    /* min-height: 475px; */
+    padding-top: 5px;
+    display:flex;
+    justify-content:center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items:center;
+    /* flex-basis: 450px; */
+    /* flex-grow: 0; */
+    
+  }
+  
+.project{
+    
+    padding-top: 5px;
+    display:flex;
+    justify-content:center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items:center;
+}
+  .card {
+    /* margin: 12px; */
+    /* flex-direction: column; */
+    /* background: #fff; */
+    /* border-radius: 7px; */
+    /* padding: 0 0 25px 0; */
+    flex-basis: 450px;
+    border: solid 2px black;
+    
+    /* flex-grow: 0; */
+   
+
+  }
+  .card > header {
+    
+    background: #9ec8ff;
+    /* position: fixed; */
+    border-bottom: none;
+    padding-top: 5px;
+    padding-bottom: 20px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    max-height: 100px;
+    position: static;
+        /* padding: 20px; */
+    /* padding: 0 0 25px 0; */
+  
+  }
+  .gallery{
+    /* min-height: 600px; */
+    display: flex;
+    flex-direction: row; 
+    flex-grow: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-around;
+    /* align-items: space-around; */
+  }
+
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+  
+  .gallery > img{
+    border: 3px solid #ffffff;
+    /*max-height: 250px; 
+ /* border-style: solid 10px #50C7C7; */
+    border-radius: 7px;
+    width: 300px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  #image30{
+    border: 3px solid #ffffff;
+    border-radius: 7px;
+  }
+
+  @keyframes homework{
+      from{
+          width: 50px;
+          opacity: 0;
+      }
+      to{
+          width: 425px;
+          opacity:1;
+      }
+  }
+
+  #logo{
+    animation-name: homework;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    
+}
+.anim-typewriter{
+  animation: typewriter 4s steps(44) 1s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 24em;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+}
+.line-1{
+  position: relative;
+  top: 50%;  
+  width: 24em;
+  margin: 0 auto;
+  border-right: 2px solid rgba(255,255,255,.75);
+  font-size: 180%;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%);    
+}
+
+@media screen and (min-width: 850px){
+    header{
+        
+        display:flex;
+        background: #fff;
+        border-bottom: 3px solid #000000;
+        justify-content:space-between;
+        flex-direction: row;
+        align-content:center;
+        position: sticky;
+        top: 0;
+        z-index:1;
+
+      }
+      body{
+        font-family: 'Poiret One', serif;
+        background: url('../gifs/intersection.gif');
+        
+        background-size: cover;
+        background-color: none;
+        background-repeat: no-repeat;
+    
+        /* font-size: 16pt; test for this! Make all sizes em or rem */
+      }
+      .card > header {
+        background: #bd4656;
+    /* position: fixed; */
+      border-bottom: none;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-top-left-radius: 7px;
+        border-top-right-radius: 7px;
+        position: static;
+            /* padding: 20px; */
+        /* padding: 0 0 25px 0; */
+      
+      }
+
+
+      .nav_links{
+        display:flex;
+        /* justify-content:flex-end; */
+        flex-direction: row;
+        justify-content: space-around;
+        /* padding: 1px; */
+      }
+      .card {
+        /* margin: 12px; */
+        /* flex-direction: column; */
+        /* background: #fff; */
+        /* border-radius: 7px; */
+        /* padding: 0 0 25px 0; */
+        flex-basis: 250px;
+        /* flex-grow: 0; */
+       
+    
+      }
+}
+/*
+ @media print{ 
+    body{
+        background: #f1f1f1;
+        /* font-size: 16pt; test for this! Make all sizes em or rem 
+      }
+      nav{
+        width: 100%;
+      }
+      .nav_links{
+        display:flex;
+        justify-content:space-around;
+        flex-direction: row;
+        align-items:space-around;
+        padding: 1px;
+      }
+
+      
+
+      li:nth-child(1)::before{
+        content: "👍";
+      }
+
+      li:nth-child(2)::after{
+        content: "👍";
+      }
+      li:nth-child(3)::before{
+        content: "👍";
+      }
+      .nav_links li::before{
+        content: none;
+      }
+
+      .nav_links li::after{
+        content: none;
+      }
+      .card {
+        
+        flex-basis: 250px;
+        border: solid 2px #45ADDD;
+       
+       
+    
+      }
+
+    
+      .gallery{
+          display: none;
+      }
+      .pricing{
+        
+        display:flex;
+        justify-content:center;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items:baseline;
+         flex-basis: 250px;
+        
+        align-items: flex-end;
+        
+      }
+
+      #gallery{
+          display: none;
+      }
+}
+*/
+@media (prefers-reduced-motion){
+    #logo{
+        animation:none;
+    }
+}
+
+
+ 
+
+
