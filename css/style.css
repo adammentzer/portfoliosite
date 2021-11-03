@@ -69,7 +69,7 @@ body{
     /* margin: 12px; */
     /* flex-direction: column; */
     /* background: #fff; */
-    /* border-radius: 7px; */
+     /* border-radius: 25%;  */
     /* padding: 0 0 25px 0; */
     flex-basis: 450px;
     border: solid 2px black;
@@ -88,6 +88,7 @@ body{
     border-top-left-radius: 7px;
     border-top-right-radius: 7px;
     max-height: 100px;
+    /* max-width: 800px; */
     position: static;
         /* padding: 20px; */
     /* padding: 0 0 25px 0; */
@@ -168,6 +169,13 @@ body{
   overflow: hidden;
   transform: translateY(-50%);    
 }
+.waterfall{
+  background: rgb(37, 121, 155);
+
+}
+.city2{
+  background: rgb(189, 64, 64);
+}
 
 @media screen and (min-width: 850px){
     header{
@@ -193,6 +201,35 @@ body{
     
         /* font-size: 16pt; test for this! Make all sizes em or rem */
       }
+      .grid{
+       display: grid;
+       grid-template-columns: 200px 200px 200px;
+       grid-template-rows: 200px 200px 200px;
+      
+      }
+      .waterfall{
+        background: url('../gifs/water.gif');
+        
+        background-size: cover;
+        background-color: none;
+        background-repeat: no-repeat;
+      }
+      .koi{
+        background: url('../gifs/koi.gif');
+        
+        background-size: cover;
+        background-color: none;
+        background-repeat: no-repeat;
+      }
+      .city2{
+        background: url('../gifs/city2.gif');
+        
+        background-size: cover;
+        background-color: none;
+        background-repeat: no-repeat;
+      }
+      
+
       .card > header {
         background: #bd4656;
     /* position: fixed; */
