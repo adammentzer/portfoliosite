@@ -3,20 +3,20 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale =1">
-    <link rel="icon" href="images/logo_icon.png">
+    <link rel="icon" href="icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/html5reset.css">
     <link rel="stylesheet" type="text/css" href="css/starter.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <!-- <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&display=swap" rel="stylesheet"> -->
    <title>Projects</title>
   </head>
-  <body>
+  <body class="aurora">
     <a class = "skip">Skip to Main Content</a>
     <header>
-      <img src="images/logo.png" alt="" id = "logo">
+      <img src="images/logo.png" alt="my logo" id = "logo">
       <!-- add your personal image above -->
       <nav>
         <ul class="nav_links">
@@ -28,20 +28,27 @@
         </ul>
     </nav>
   </header>
-  <main class="about" id="skip">
-    <h1 style = color:white>About Me</h1>
-    <img src = "IMG_3100 2.jpg" style = "border-radius: 50%; display: block; margin-left: auto; margin-right: auto; width: 200px; height:auto;" />
-    <p style = "display:block;  border-radius: 3%; color: rgb(255, 255, 255); padding-top: 50px; padding-bottom: 100px; padding-right: 100px; padding-left: 100px;" >Hi! I'm Adam Mentzer, a junior studying Computer Science at the University of Michigan. As someone who stutters, I constantly reflect on ways to make the content of my speech smoother, more fluid, and more easily understood. Perhaps this tendency is the reason I strive to use data-driven approaches to help make products truly conform to the user's needs and that provide tangible value.
-
-      As a student at the University of Michigan, I've learned how to analyze problems and find their solutions, but the most important lessons I've learned are from those who I work with, as the most valuable part of being at Michigan is the empowering opportunity to draw on the knowledge and experiences of others so that I can create as much authentic impact as possible.
-      
-      Currently, I'm pursuing Information and Computer Science through UM's School of Information, and will hopefully be adding a Business minor through the Ross School of Business this fall.
-      
-      In my spare time, I love watch to the NFL and Formula 1, while the rest of my weekends are usually spent record shopping with my friends and exploring Ann Arbor through long bike rides -- if you're in the area and need to know where to find the best parks, shop, or eat, I'm your guy.
+  <main id="skip">
+    <h1 style = color:white>Boredom Fighter</h1>
+    <div class = "grid-container">
+    <img src = "swift1.png" alt="a screenshot of this project" style = "padding-left: 50px; grid-column: 1 / span 1; border-radius: 7.5%; display: grid; margin-left: auto; margin-right: auto; width: auto; height:auto; border-top-left-radius: 7.5%;"/>
+    <p style = "grid-column: 2 / span 1; color: rgb(255, 255, 255); padding-top: 50px; padding-bottom: 100px; padding-right: 50px; padding-left: 115px;" >
+      Like a lot of people, I hate being bored and feeling stagnant. Even when I have free time, I often face a lapse in creativity or decision paralysis where I feel like I just can’t find something to do. After describing this problem to a friend, they referenced <a href = "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0220736">this study about external reinforcement in decision making </a> 
+      and how it helped them make their own decisions. 
+      Knowing this, I resolved to create an app that would TELL me what to do when I was 
+      bored rather than having to come up with something myself. 
+      Because it wasn’t my own idea to shoot down, it was harder to refuse. 
+    <br>
+    <br>
+      Aside from the reasons above, the purpose of this project was to introduce myself to Swift and 
+      SwiftUI for iOS development. 
+      The app itself works by taking user-defined parameters 
+      such as number of people, budget, and the amount of time allotted for 
+      the activity and randomly picks an activity that matches that criteria.
     </p>
-    
+  </div>
     <footer>
-      <p> Made by Adam Mentzer</p>
+    <p>Made with ♥ in A²</p> 
     </footer>
   </body>
 </html>

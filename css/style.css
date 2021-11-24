@@ -1,7 +1,9 @@
 body{
     font-family:  'Poiret One', serif;
     background: url('../gifs/lush.gif');
-    
+    margin: 0;
+    padding: 0;
+    font-size: 16pt;
     background-size: cover;
     background-color: none;
     background-repeat: no-repeat;
@@ -44,7 +46,7 @@ body{
   }
 
   .pricing{
-    /* min-height: 475px; */
+    min-height: 475px;
     padding-top: 5px;
     display:flex;
     justify-content:center;
@@ -55,6 +57,67 @@ body{
     /* flex-grow: 0; */
     
   }
+  h1{
+    font-size: 2em;
+    text-align: center;
+    line-height: 2;
+  }
+  
+  h2{
+    font-size: 1.5em;
+    text-align: center;
+    padding: 5px;
+  }
+  
+  p {
+    padding: 0 30px;
+  }
+  
+  a.skip{
+    background: white;
+    left: 0;
+    padding: 6px;
+    position: absolute;
+    top: -40px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+  }
+  
+  a.skip:focus{
+    top:20px;
+    color: black;
+    text-decoration-style: solid;
+  }
+  
+  *:focus{
+    border: 1px dashed rgb(0, 0, 0);
+  }
+
+
+  .nav_item a{
+    padding: 10px;
+  }
+  
+  .nav_item a:hover, a:focus{
+    color: #000000;
+    text-decoration:underline;
+    -webkit-text-decoration-style: dashed;
+            text-decoration-style: dashed;
+  }
+  .misc{
+    /* min-height: 475px; */
+    padding-top: 5px;
+    display:flex;
+    justify-content:space-evenly;
+    /* flex-direction: row; */
+    flex-wrap: wrap;
+    /* align-items:center; */
+    flex-basis: 450px;
+    flex-grow: 0;
+    flex-grow: space
+    
+  }
   
 .project{
     
@@ -62,15 +125,15 @@ body{
     display:flex;
     justify-content:center;
     flex-wrap: wrap;
-    flex-direction: column;
-    align-items:center;
+    
+    /* flex-direction: column; */
+     /* align-items:center;  */
 }
   .card {
-    /* margin: 12px; */
-    /* flex-direction: column; */
-    /* background: #fff; */
-     /* border-radius: 25%;  */
-    /* padding: 0 0 25px 0; */
+    margin: 12px;
+    background: #fff;
+    border-radius: 7px;
+    padding: 0 0 25px 0;
     flex-basis: 450px;
     border: solid 2px black;
     
@@ -80,8 +143,8 @@ body{
   }
   .card > header {
     
-    background: #9ec8ff;
-    /* position: fixed; */
+    background: #2aca95;
+    /* position: fixed;#9ec8ff */
     border-bottom: none;
     padding-top: 5px;
     padding-bottom: 20px;
@@ -94,8 +157,22 @@ body{
     /* padding: 0 0 25px 0; */
   
   }
+  .card > ul{
+    list-style: none;
+    padding-left: 5px;
+  }
+  
+  .card > ul li {
+    width: 90%;
+    margin: 20px auto;
+    
+  }
+  .hello{
+    color:white; font-size: 4em; padding-top: 1em;
+  }
   .gallery{
     /* min-height: 600px; */
+    min-height: 600px;
     display: flex;
     flex-direction: row; 
     flex-grow: 0;
@@ -104,6 +181,12 @@ body{
     align-content: space-around;
     /* align-items: space-around; */
   }
+  footer{
+    background-color: black;
+    color: white;
+    padding: 30px;
+    text-align: center;
+  }
 
   .center {
     display: block;
@@ -111,7 +194,13 @@ body{
     margin-right: auto;
     width: 50%;
   }
-  
+  .classproj{
+    background: url('../gifs/download.jpg');
+    
+    background-size: cover;
+    background-color: none;
+    background-repeat: no-repeat;
+  }
   .gallery > img{
     border: 3px solid #ffffff;
     /*max-height: 250px; 
@@ -127,57 +216,89 @@ body{
     border: 3px solid #ffffff;
     border-radius: 7px;
   }
-
-  @keyframes homework{
-      from{
-          width: 50px;
-          opacity: 0;
-      }
-      to{
-          width: 425px;
-          opacity:1;
-      }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
   }
 
-  #logo{
-    animation-name: homework;
-    animation-duration: 5s;
-    animation-iteration-count: 1;
-    
-}
-.anim-typewriter{
-  animation: typewriter 4s steps(44) 1s 1 normal both,
-             blinkTextCursor 500ms steps(44) infinite normal;
-}
-@keyframes typewriter{
-  from{width: 0;}
-  to{width: 24em;}
-}
-@keyframes blinkTextCursor{
-  from{border-right-color: rgba(255,255,255,.75);}
-  to{border-right-color: transparent;}
-}
-.line-1{
-  position: relative;
-  top: 50%;  
-  width: 24em;
-  margin: 0 auto;
-  border-right: 2px solid rgba(255,255,255,.75);
-  font-size: 180%;
+  
+/*
+  .typewriter {
+    font-family: Courier, monospace;
+	display: block;
   text-align: center;
-  white-space: nowrap;
-  overflow: hidden;
-  transform: translateY(-50%);    
 }
+
+.typewriter-text {
+    display: block;
+    text-align: center;
+  	overflow: hidden;
+  	letter-spacing: 2px;
+ 	animation: typing 3s steps(30, end), blink .75s step-end infinite;
+    white-space: nowrap;
+    font-size: 40px;
+    font-weight: 700;
+    border-right: 4px solid orange;
+    box-sizing: border-box;
+}
+
+@keyframes typing {
+    from { 
+        width: 0% 
+    }
+    to { 
+        width: 100% 
+    }
+}
+
+@keyframes blink {
+    from, to { 
+        border-color: transparent 
+    }
+    50% { 
+        border-color: orange; 
+    }
+}
+*/
 .waterfall{
-  background: rgb(37, 121, 155);
+  background: rgb(110, 133, 143);
+  /* rgb(37, 121, 155); */
 
 }
+
+.aurora{
+  
+  background: url('../gifs/aurora.gif');
+        
+  background-size: cover;
+  background-color: none;
+  background-repeat: no-repeat;
+}
+
 .city2{
-  background: rgb(189, 64, 64);
+  background: url('../gifs/city2.gif');
+        
+  background-size: cover;
+  background-color: none;
+  background-repeat: no-repeat;
 }
 
-@media screen and (min-width: 850px){
+@media screen and (min-width: 768px){
     header{
         
         display:flex;
@@ -207,8 +328,18 @@ body{
        grid-template-rows: 200px 200px 200px;
       
       }
+      .grid-container {
+        display: grid; grid-template-rows: 1; grid-template-columns: 2; align-items: center; 
+      }
       .waterfall{
         background: url('../gifs/water.gif');
+        
+        background-size: cover;
+        background-color: none;
+        background-repeat: no-repeat;
+      }
+      .aurora{
+        background: url('../gifs/aurora.gif');
         
         background-size: cover;
         background-color: none;
@@ -222,14 +353,16 @@ body{
         background-repeat: no-repeat;
       }
       .city2{
-        background: url('../gifs/city2.gif');
+        background: url('../gifs/koi.gif');
         
         background-size: cover;
         background-color: none;
         background-repeat: no-repeat;
       }
       
-
+      .hello{
+        color:white; font-size: 4em; padding-top: 2.1em;
+      }
       .card > header {
         background: #bd4656;
     /* position: fixed; */
@@ -244,7 +377,13 @@ body{
       
       }
 
-
+      .classproj{
+        background: url('../gifs/download.jpg');
+        
+        background-size: cover;
+        background-color: none;
+        background-repeat: no-repeat;
+      }
       .nav_links{
         display:flex;
         /* justify-content:flex-end; */
@@ -263,74 +402,59 @@ body{
        
     
       }
-}
-/*
- @media print{ 
-    body{
-        background: #f1f1f1;
-        /* font-size: 16pt; test for this! Make all sizes em or rem 
-      }
-      nav{
-        width: 100%;
-      }
-      .nav_links{
-        display:flex;
-        justify-content:space-around;
-        flex-direction: row;
-        align-items:space-around;
-        padding: 1px;
-      }
-
+     
+      .cardblue {
+          margin: 12px;
+          background: #fff;
+          border-radius: 7px;
+          padding: 0 0 25px 0;
       
-
-      li:nth-child(1)::before{
-        content: "👍";
-      }
-
-      li:nth-child(2)::after{
-        content: "👍";
-      }
-      li:nth-child(3)::before{
-        content: "👍";
-      }
-      .nav_links li::before{
-        content: none;
-      }
-
-      .nav_links li::after{
-        content: none;
-      }
-      .card {
         
+        flex-basis: 450px;
+        border: solid 2px black;
+        
+        /* flex-grow: 0; */
+       
+    
+      }
+      .cardblue h3 {
+        font-size: 2em;
+        color: white;
+        text-align: center center;
+    }
+      .cardblue > header {
+        
+        background: #276683;
+        border-bottom: none;
+        /* position: fixed;#9ec8ff 
+        border-bottom: none;
+       
+        padding-top: 5px;
+        padding-bottom: 20px;
+        border-top-left-radius: 7px;
+        border-top-right-radius: 7px;
+        max-height: 100px;
+        /* max-width: 800px; 
+        position: static;
+        */
         flex-basis: 250px;
-        border: solid 2px #45ADDD;
-       
-       
+            /* padding: 20px; */
+        /* padding: 0 0 25px 0; */
+      
+      }
+     
     
+      .cardblue > ul{
+        list-style: none;
+        padding-left: 5px;
       }
-
-    
-      .gallery{
-          display: none;
-      }
-      .pricing{
+      
+      .cardblue > ul li {
+        width: 90%;
+        /* margin: 20px auto; */
         
-        display:flex;
-        justify-content:center;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        align-items:baseline;
-         flex-basis: 250px;
-        
-        align-items: flex-end;
-        
-      }
-
-      #gallery{
-          display: none;
       }
 }
-*/
 @media (prefers-reduced-motion){
     #logo{
         animation:none;
